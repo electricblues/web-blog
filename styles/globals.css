@@ -14,25 +14,3 @@ a {
   box-sizing: border-box;
 }
 
-.picture-wrapper {
-  display: flex;
-  flex-direction: row;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.picture-wrapper-item {
-  flex: 50%;
-}
-
-.picture-wrapper-child {
-  background-color: white;
-}
-
-@media (max-width: 800px) {
-  .picture-wrapper {
-    flex-direction: column;
-  }
-  .picture-wrapper-item {
-    flex: 100%;
-  }
-}
