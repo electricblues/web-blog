@@ -9,8 +9,19 @@ const PictureWrapper = ({ image, children }) => {
   return (
     <div className="picture-wrapper">
       <div className="picture-wrapper-item">
-        <div style={{ height: "100%", width: "100%", position: "relative" }}>
-          <Image layout="fill" objectFit="contain" src={image} alt={"boat"} />
+        <div
+          style={{
+            height: "100%",
+            minHeight: "40rem",
+            width: "100%",
+            position: "relative",
+            backgroundSize: "cover",
+            backgroundImage: `url(${image})`,
+          }}
+        >
+          {/**
+         * 
+        <Image layout="fill" objectFit="contain" src={image} alt={"boat"} />  */}
         </div>
       </div>
       <div className="picture-wrapper-item picture-wrapper-child">
@@ -42,9 +53,11 @@ export default function Home() {
         height: "100%",
       }}
     >
-      <PictureWrapper image={"/images/boat.jpg"}>
-        <Intro />
-      </PictureWrapper>
+      <div style={{ maxWidth: "100rem", margin: "auto" }}>
+        <PictureWrapper image={"/images/boat.jpg"}>
+          <Intro />
+        </PictureWrapper>
+      </div>
     </div>
   );
 }
