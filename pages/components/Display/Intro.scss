@@ -1,0 +1,39 @@
+.intro {
+  padding: 2rem;
+  padding-top: 4rem;
+  text-align: center;
+  height: 100%;
+  background-color: rgba(58, 155, 166, 0.3);
+  .intro-title {
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 100;
+  }
+  .intro-action {
+    margin-top: 4rem;
+  }
+  .intro-title-strong {
+    color: darkorange;
+    font-weight: 400;
+  }
+  @media (max-width: $layout-breakpoint-small) {
+    text-align: left;
+    padding: 1rem;
+    padding-top: 2rem;
+
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.3) 50%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    .intro-title {
+      color: #e6d3c7;
+      font-size: 2rem;
+      font-weight: 100;
+    }
+    .intro-action {
+      text-align: center;
+      margin-top: 6.5rem;
+    }
+  }
+}
