@@ -1,3 +1,7 @@
+/* :root {
+  --font-family: "Cormorant Garamond", serif;
+} */
+
 html,
 body {
   padding: 0;
@@ -13,4 +17,3 @@ a {
 * {
   box-sizing: border-box;
 }
-

@@ -1,21 +1,24 @@
 .intro {
+  color: white;
   padding: 2rem;
   padding-top: 4rem;
   text-align: center;
   height: 100%;
-  background-color: rgba(58, 155, 166, 0.3);
+  background-color: rgba(13, 113, 114, 0.518);
+  font-family: "Cormorant Garamond", serif;
   .intro-title {
     width: 100%;
     font-size: 3rem;
-    font-weight: 100;
   }
   .intro-action {
     margin-top: 4rem;
   }
   .intro-title-strong {
-    color: darkorange;
     font-weight: 400;
   }
+  @media (max-width: $layout-breakpoint-small) {
+  }
+  /*
   @media (max-width: $layout-breakpoint-small) {
     text-align: left;
     padding: 1rem;
@@ -35,5 +38,5 @@
       text-align: center;
       margin-top: 6.5rem;
     }
-  }
+  }*/
 }
