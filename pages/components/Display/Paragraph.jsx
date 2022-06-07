@@ -4,22 +4,23 @@ const Paragraph = ({ title, titleDirection, texts }) => (
   <>
     <div
       style={{
-        fontSize: "4rem",
+        fontSize: "3.5rem",
         textAlign: `${titleDirection}`,
         marginBottom: "1rem",
-        paddingLeft: "4rem",
+        paddingLeft: "1rem",
         paddingRight: "4rem",
       }}
     >
-      {title}
+      <i>{title}</i>
     </div>
     <div
       style={{
-        fontSize: "1.5rem",
+        fontSize: "1.3rem",
         display: "flex",
         flexDirection: "column",
         gap: "1rem",
         marginBottom: "5rem",
+        textAlign: "left",
       }}
     >
       {texts.map((txt, index) => (

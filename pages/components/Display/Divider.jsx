@@ -1,6 +1,6 @@
-const Divider = ({ children }) => {
+const Divider = ({ children, color }) => {
   const Line = () => (
-    <div style={{ height: "50%", borderBottom: "2px solid lightgray" }}></div>
+    <div style={{ height: "50%", borderBottom: `2px solid ${color}` }}></div>
   );
   return (
     <div
