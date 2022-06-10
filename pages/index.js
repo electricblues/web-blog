@@ -1,11 +1,10 @@
 import Intro from "./components/Intro/Intro";
 import Paragraph from "./components/Display/Paragraph";
-import { Button } from "primereact/button";
 import Divider from "./components/Display/Divider";
 import IntroText from "./components/Intro/IntroText";
 import Page from "./components/Display/Page";
-import Quote from "./components/Display/Quote";
 import NormalImage from "./components/Display/NormalImage";
+import ContactForm from "./components/ContactForm/ContactForm";
 
 export default function Home() {
   return (
@@ -16,24 +15,23 @@ export default function Home() {
         height: "100%",
       }}
     >
-      <Intro text={"Be The Captain of your life"} />
-
       <div
         className="temp-body"
         style={{
-          paddingTop: "2rem",
           width: "100%",
           margin: "auto",
 
           textAlign: "center",
           //backgroundColor: "rgb(250,250,250)",
-          backgroundImage: "linear-gradient(lightblue, white)",
+          backgroundImage: "linear-gradient(lightgray, lightblue, #0066CC)",
           fontFamily: `"Cormorant Garamond", serif`,
         }}
       >
         <Page>
+          <Intro text={"Be The Captain of your life"} />
           <IntroText />
-        </Page>{" "}
+        </Page>
+
         <Divider color={"none"}>
           <h1 style={{ color: "white" }}>* * *</h1>
         </Divider>
@@ -63,6 +61,27 @@ export default function Home() {
           </Divider>
           <br />
           <Paragraph
+            title={"why coaching?"}
+            titleDirection={"left"}
+            texts={[
+              `A coach is someone who provides guidance to a client on their
+                goals and helps them reach their full potential.`,
+              `Coaching is not
+                a quick fix for all the existing problems in the client’s life
+                it is rather learning the skill how to find the answers for any
+                problems within oneself.`,
+              `Why do I use the holistic approach in
+                my programme? It is simple because she is practicing this
+                approach in her life and sees the amazing results of
+                self-improvement and how the life around is changing for better.`,
+            ]}
+          />
+
+          <Divider color={"lightgray"}>
+            <h1 style={{ color: "black" }}>* * *</h1>
+          </Divider>
+          <br />
+          <Paragraph
             title={"qualifications"}
             titleDirection={"left"}
             texts={[
@@ -86,27 +105,14 @@ export default function Home() {
           </div>
 
           <br />
-          <Divider color={"lightgray"}>
-            <h1 style={{ color: "black" }}>* * *</h1>
-          </Divider>
-          <br />
-          <Paragraph
-            title={"why coaching?"}
-            titleDirection={"left"}
-            texts={[
-              `A coach is someone who provides guidance to a client on their
-                goals and helps them reach their full potential.`,
-              `Coaching is not
-                a quick fix for all the existing problems in the client’s life
-                it is rather learning the skill how to find the answers for any
-                problems within oneself.`,
-              `Why do I use the holistic approach in
-                my programme? It is simple because she is practicing this
-                approach in her life and sees the amazing results of
-                self-improvement and how the life around is changing for better.`,
-            ]}
-          />
         </Page>
+        <Divider color={"none"}>
+          <h1 style={{ color: "white" }}>* * *</h1>
+        </Divider>
+        <Page>
+          <ContactForm />
+        </Page>
+        <br />
       </div>
     </div>
   );

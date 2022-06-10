@@ -18,7 +18,12 @@ const IntroText = () => (
     </div>
     <br />
     <br />
-    <Button>Say hello</Button>
+    <Button
+      className="p-button-info p-button-rounded"
+      style={{ height: "4rem", fontSize: "1.3rem", padding: "1.4rem" }}
+    >
+      Begin your journey
+    </Button>
     <br />
   </>
 );

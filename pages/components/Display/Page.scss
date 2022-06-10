@@ -1,0 +1,12 @@
+.page-body {
+  padding: 5rem;
+  background-color: white;
+  max-width: 60rem;
+  box-shadow: 15px 20px 5px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  margin-bottom: 2rem;
+
+  @media screen and (max-width: $layout-breakpoint-small) {
+    padding: 2rem;
+  }
+}
