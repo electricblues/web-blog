@@ -19,14 +19,15 @@ const ContactForm = () => {
     <div>
       <div
         style={{
-          fontSize: "3.5rem",
+          fontSize: "3.3rem",
           textAlign: "left",
           marginBottom: "1rem",
           paddingLeft: "1rem",
           paddingRight: "4rem",
+          color: "#0288d1",
         }}
       >
-        <i>Contact</i>
+        Contact
       </div>
       <div style={{ margin: "none", textAlign: "left", width: "auto" }}>
         <span className="p-float-label">

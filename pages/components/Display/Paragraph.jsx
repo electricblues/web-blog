@@ -3,15 +3,16 @@ import PropTypes from "prop-types";
 const Paragraph = ({ title, titleDirection, texts }) => (
   <>
     <div
+      className="paragraph-title"
       style={{
-        fontSize: "3.5rem",
+        fontSize: "3.3rem",
         textAlign: `${titleDirection}`,
         marginBottom: "1rem",
         paddingLeft: "1rem",
         paddingRight: "4rem",
       }}
     >
-      <i>{title}</i>
+      {title}
     </div>
     <div
       style={{

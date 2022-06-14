@@ -5,12 +5,20 @@ import IntroText from "./components/Intro/IntroText";
 import Page from "./components/Display/Page";
 import NormalImage from "./components/Display/NormalImage";
 import ContactForm from "./components/ContactForm/ContactForm";
+import { useRef } from "react";
 
 export default function Home() {
+  const myRef = useRef(null);
+
+  const executeScroll = () => {
+    console.log("lmao");
+    myRef.current.scrollIntoView();
+  };
+  // run t
+
   return (
     <div
       style={{
-        paddingTop: "0px",
         minHeight: "100vh",
         height: "100%",
       }}
@@ -18,26 +26,22 @@ export default function Home() {
       <div
         className="temp-body"
         style={{
-          width: "100%",
-          margin: "auto",
-
           textAlign: "center",
-          //backgroundColor: "rgb(250,250,250)",
           backgroundImage: "linear-gradient(lightgray, lightblue, #0066CC)",
           fontFamily: `"Cormorant Garamond", serif`,
         }}
       >
         <Page>
           <Intro text={"Be The Captain of your life"} />
-          <IntroText />
+          <IntroText onButtonAction={executeScroll} />
         </Page>
 
         <Divider color={"none"}>
-          <h1 style={{ color: "white" }}>* * *</h1>
+          <h3 style={{ color: "white" }}>* * *</h3>
         </Divider>
         <Page>
           <Paragraph
-            title={"about"}
+            title={"about me"}
             titleDirection={"left"}
             texts={[
               `Elvira believes that by taking care of your body, mind and
@@ -57,7 +61,7 @@ export default function Home() {
           />
           <br />
           <Divider color={"lightgray"}>
-            <h1 style={{ color: "black" }}>* * *</h1>
+            <h3 style={{ color: "black" }}>* * *</h3>
           </Divider>
           <br />
           <Paragraph
@@ -78,7 +82,7 @@ export default function Home() {
           />
 
           <Divider color={"lightgray"}>
-            <h1 style={{ color: "black" }}>* * *</h1>
+            <h3 style={{ color: "black" }}>* * *</h3>
           </Divider>
           <br />
           <Paragraph
@@ -107,10 +111,12 @@ export default function Home() {
           <br />
         </Page>
         <Divider color={"none"}>
-          <h1 style={{ color: "white" }}>* * *</h1>
+          <h3 style={{ color: "white" }}>* * *</h3>
         </Divider>
         <Page>
-          <ContactForm />
+          <div ref={myRef}>
+            <ContactForm />
+          </div>
         </Page>
         <br />
       </div>

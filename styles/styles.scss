@@ -1,12 +1,16 @@
 // Display components
 
 $layout-breakpoint-small: 700px;
+$primary-color: #0288d1;
 
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
+@import "./index.scss";
 @import "../pages/components/PictureWrapper/PictureWrapper.scss";
 @import "../pages/components/Intro/Intro.scss";
 @import "../pages/components/Display/Page.scss";
+@import "../pages/components/Display/Paragraph.scss";
+@import "../pages/components/Display/Sticker.scss";
 
 // .page-body {
 //   background-color: #caf0f9;
