@@ -8,8 +8,6 @@ const Paragraph = ({ title, titleDirection, texts }) => (
         fontSize: "3.3rem",
         textAlign: `${titleDirection}`,
         marginBottom: "1rem",
-        paddingLeft: "1rem",
-        paddingRight: "4rem",
       }}
     >
       {title}

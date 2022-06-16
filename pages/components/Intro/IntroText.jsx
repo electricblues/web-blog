@@ -22,20 +22,20 @@ const stickyElement = "stick";
 const IntroText = ({ onButtonAction }) => {
   return (
     <>
-      <br />
-      <br />
       <div style={{ fontSize: "2rem", maxWidth: "40rem", margin: "auto" }}>
         Like a sailboat you already have all the necessary equipment for your
         life journey
       </div>
       <br />
       <div style={{ fontSize: "1.6rem", maxWidth: "40rem", margin: "auto" }}>
-        Define your destiny. Learn how to navigate your boat towards the life of{" "}
+        Define your destiny
+      </div>{" "}
+      <div style={{ fontSize: "1.6rem", maxWidth: "40rem", margin: "auto" }}>
+        Learn how to navigate your boat towards the life of{" "}
         <b style={{ color: "#0288D1" }}>your choice</b>
       </div>
       <br />
       <br />
-
       <Sticker
         id="something"
         child={
@@ -53,7 +53,6 @@ const IntroText = ({ onButtonAction }) => {
           </div>
         }
       />
-      <br />
     </>
   );
 };

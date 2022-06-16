@@ -1,6 +1,6 @@
 const Divider = ({ children, color }) => {
   const Line = () => (
-    <div style={{ height: "50%", borderBottom: `2px solid ${color}` }}></div>
+    <div style={{ height: "50%", borderBottom: `1px solid ${color}` }}></div>
   );
   return (
     <div
@@ -19,3 +19,9 @@ const Divider = ({ children, color }) => {
 };
 
 export default Divider;
+
+export const Divide = ({ color = "white", line = false }) => (
+  <Divider color={line ? color : "none"}>
+    <h3 style={{ color: color ? color : "white" }}>* * *</h3>
+  </Divider>
+);

@@ -1,4 +1,4 @@
-const Quote = ({ text, author }) => (
+const Quote = ({ text, author, color }) => (
   <>
     {text ? (
       <div
@@ -7,6 +7,11 @@ const Quote = ({ text, author }) => (
           textAlign: "center",
           margin: "auto",
           fontSize: "1.2rem",
+          color: color,
+          backgroundColor: "rgba(255,255,255,0.3)",
+          padding: "1rem",
+          paddingLeft: "2rem",
+          paddingRight: "2rem",
         }}
       >
         <p>
