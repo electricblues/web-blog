@@ -1,3 +1,4 @@
+
 import Intro from "./components/Intro/Intro";
 import Paragraph from "./components/Display/Paragraph";
 import Divider from "./components/Display/Divider";
@@ -15,6 +16,7 @@ export default function Home() {
     myRef.current.scrollIntoView();
   };
   // run t
+
 
   return (
     <div
@@ -118,6 +120,7 @@ export default function Home() {
             <ContactForm />
           </div>
         </Page>
+
         <br />
       </div>
     </div>
