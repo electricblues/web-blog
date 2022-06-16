@@ -1,0 +1,9 @@
+.temp-body {
+  padding-top: 2rem;
+  width: 100%;
+  margin: auto;
+
+  @media (max-width: $layout-breakpoint-small) {
+    padding-top: 0px;
+  }
+}

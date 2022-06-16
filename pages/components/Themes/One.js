@@ -1,4 +1,4 @@
-import "primereact/resources/themes/lara-light-indigo/theme.css";
+import "primereact/resources/themes/saga-green/theme.css";
 
 export default function One() {
   return <></>;
