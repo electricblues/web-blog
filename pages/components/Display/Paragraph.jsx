@@ -6,7 +6,7 @@ const Paragraph = ({ title, titleDirection, texts }) => (
       className="paragraph-title"
       style={{
         fontSize: "3.3rem",
-        textAlign: `${titleDirection}`,
+        textAlign: `${titleDirection || "left"}`,
         marginBottom: "1rem",
       }}
     >

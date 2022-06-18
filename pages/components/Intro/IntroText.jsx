@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "primereact/button";
 import Sticker from "../Display/Sticker";
+import ChangingButton from "../ContactForm/ChangingButton";
 
 const stickyElement = "stick";
 
@@ -20,6 +21,26 @@ const stickyElement = "stick";
 // }
 
 const IntroText = ({ onButtonAction }) => {
+  const introButton = (
+    <div style={{ fontSize: "2rem", maxWidth: "40rem", margin: "auto" }}>
+      <Button
+        className="p-button-info p-button-rounded"
+        style={{
+          height: "4rem",
+          fontSize: "1.3rem",
+        }}
+        onClick={onButtonAction}
+      >
+        Begin your journey
+      </Button>
+    </div>
+  );
+
+  const introButton2 = (
+    <div style={{ fontSize: "2rem", maxWidth: "40rem", margin: "auto" }}>
+      <ChangingButton />
+    </div>
+  );
   return (
     <>
       <div style={{ fontSize: "2rem", maxWidth: "40rem", margin: "auto" }}>
@@ -36,23 +57,7 @@ const IntroText = ({ onButtonAction }) => {
       </div>
       <br />
       <br />
-      <Sticker
-        id="something"
-        child={
-          <div style={{ fontSize: "2rem", maxWidth: "40rem", margin: "auto" }}>
-            <Button
-              className="p-button-info p-button-rounded"
-              style={{
-                height: "4rem",
-                fontSize: "1.3rem",
-              }}
-              onClick={onButtonAction}
-            >
-              Begin your journey
-            </Button>
-          </div>
-        }
-      />
+      <Sticker id="something" child={introButton2} />
     </>
   );
 };
