@@ -9,9 +9,6 @@ $font: "Cormorant Garamond", serif;
 //$font: "Shippori Mincho", serif;
 //$font: "'Italiana', serif";
 
-body {
-  font-family: $font;
-}
 :export {
   primaryColor: $primary-color;
   layoutBreakpointSmall: $layout-breakpoint-small;

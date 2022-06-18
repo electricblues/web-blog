@@ -1,0 +1,10 @@
+@import "../../../styles/vars.module.scss";
+
+.changingMotion {
+  background-color: $primary-color;
+  width: max-content;
+  margin: auto;
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
