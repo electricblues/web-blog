@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 import _ from "lodash";
 
@@ -6,7 +6,7 @@ import { v4 } from "uuid";
 
 const stickyClass = "sticky";
 
-const Sticker = ({ child, id }) => {
+const Sticker = ({ child, id, children }) => {
   const [stickyDimensions, setStickyDimensions] = useState({
     width: undefined,
     top: undefined,
@@ -42,21 +42,37 @@ const Sticker = ({ child, id }) => {
     //return;
   }, [stickyDimensions]);
 
-  const newChild = (stck) => ({
-    ...child,
-    props: {
-      ...child.props,
-      style: stck ? { width: stickyDimensions.width } : {},
-      className: stck ? stickyClass : "",
-    },
-  });
+  // const newChild = (stck) =>
+  //   child
+  //     ? {
+  //         ...child,
+  //         props: {
+  //           ...child.props,
+  //           style: stck ? { width: stickyDimensions.width } : {},
+  //           className: stck ? stickyClass : "",
+  //         },
+  //       }
+  //     : {};
+
+  const childrenWithProps = (stck) =>
+    React.Children.map(children, (child) => {
+      // Checking isValidElement is the safe way and avoids a typescript
+      // error too.
+      if (React.isValidElement(child)) {
+        return React.cloneElement(child, {
+          style: stck ? { width: stickyDimensions.width } : {},
+          className: stck ? stickyClass : "",
+        });
+      }
+      return child;
+    });
 
   return (
     <>
       <div
         style={isStick ? { height: `${stickyDimensions.height}px` } : {}}
       ></div>
-      <div id={id}>{newChild(isStick)}</div>
+      <div id={id}>{childrenWithProps(isStick)}</div>
     </>
   );
 };

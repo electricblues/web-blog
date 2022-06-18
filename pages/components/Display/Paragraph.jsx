@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const Paragraph = ({ title, titleDirection, texts }) => (
+const Paragraph = ({ title, titleDirection, texts = [] }) => (
   <>
     <div
       className="paragraph-title"
@@ -22,23 +22,21 @@ const Paragraph = ({ title, titleDirection, texts }) => (
         textAlign: "left",
       }}
     >
-      {texts.map((txt, index) => (
-        <span
-          key={
-            `${title || "?"}${index || "?"}${txt.substring(0, 3)} || ` || "?"
-          }
-        >
-          {txt}
-        </span>
-      ))}
+      {!!texts ? (
+        texts.map((txt, index) => (
+          <span
+            key={
+              `${title || "?"}${index || "?"}${txt.substring(0, 3)} || ` || "?"
+            }
+          >
+            {txt}
+          </span>
+        ))
+      ) : (
+        <></>
+      )}
     </div>
   </>
 );
-
-Paragraph.propTypes = {
-  title: PropTypes.string,
-  titleDirection: PropTypes.string,
-  texts: PropTypes.arrayOf(PropTypes.string),
-};
 
 export default Paragraph;

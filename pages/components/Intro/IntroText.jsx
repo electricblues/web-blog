@@ -42,7 +42,8 @@ const IntroText = ({ onButtonAction }) => {
       </div>
       <br />
       <br />
-      <Sticker id="something" child={introButton2} />
+      {/* <Sticker id="something" child={introButton2} /> */}
+      <Sticker id="something">{introButton2} </Sticker>
     </>
   );
 };

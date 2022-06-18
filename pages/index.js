@@ -4,11 +4,10 @@ import { Divide } from "./components/Display/Divider";
 import IntroText from "./components/Intro/IntroText";
 import Page from "./components/Display/Page";
 import NormalImage from "./components/Display/NormalImage";
-import Quote from "./components/Display/Quote";
 import { Parallax } from "react-parallax";
 import { useRef } from "react";
 import Space from "./components/Display/Space";
-import { englishTexts } from "./data/texts";
+import { englishTexts } from "../data/texts";
 
 export default function Home() {
   const myRef = useRef(null);
