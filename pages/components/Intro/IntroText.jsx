@@ -5,21 +5,6 @@ import ChangingButton from "../ContactForm/ChangingButton";
 
 const stickyElement = "stick";
 
-// class StickyElement {
-//   constructor(el) {
-//     this.name = el;
-//   }
-//   get() {
-//     return this.el;
-//   }
-//   getAsClass() {
-//     return `.${this.el}`;
-//   }
-//   getAsId() {
-//     return `#${this.el}`;
-//   }
-// }
-
 const IntroText = ({ onButtonAction }) => {
   const introButton = (
     <div style={{ fontSize: "2rem", maxWidth: "40rem", margin: "auto" }}>

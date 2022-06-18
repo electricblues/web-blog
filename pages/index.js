@@ -8,7 +8,7 @@ import Quote from "./components/Display/Quote";
 import { Parallax } from "react-parallax";
 import { useRef } from "react";
 import Space from "./components/Display/Space";
-import { englishTexts } from "./components/data/texts";
+import { englishTexts } from "./data/texts";
 
 export default function Home() {
   const myRef = useRef(null);
@@ -45,7 +45,6 @@ export default function Home() {
             <IntroText onButtonAction={executeScroll} />
           </Page>
           <Space />
-
           <Page>
             <Paragraph title={data.aboutMe.title} texts={data.aboutMe.texts} />
             <Paragraph
@@ -68,15 +67,7 @@ export default function Home() {
               </div>
             </div>
           </Page>
-          <Space />
-          <Page>
-            <div ref={myRef}></div>{" "}
-            <Paragraph
-              title={"contact"}
-              titleDirection={"left"}
-              texts={[`You can contact me at mewo@meow.meow`]}
-            />
-          </Page>
+          <Space height={"40rem"} />
         </Parallax>
       </div>
     </div>

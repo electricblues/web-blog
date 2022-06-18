@@ -8,3 +8,22 @@
   text-align: center;
   transition: width 2s;
 }
+
+$transition-time: 0.3s;
+.motionButton {
+  background-color: lightblue;
+  width: max-content;
+  height: 5rem;
+  margin: auto;
+  padding: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  opacity: 0.8;
+  outline: 2px solid lightblue;
+  font-weight: 200;
+  transition: opacity $transition-time, outline $transition-time;
+  &:hover {
+    opacity: 1;
+    outline: 2px solid rgb(124, 155, 166);
+  }
+}

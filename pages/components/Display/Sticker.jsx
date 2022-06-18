@@ -27,7 +27,7 @@ const Sticker = ({ child, id }) => {
     const isSticky = (_e) => {
       const scrollTop = window.scrollY;
 
-      if (scrollTop >= stickyDimensions.top) {
+      if (scrollTop >= stickyDimensions.top - 10) {
         setIsStick(true);
       } else {
         setIsStick(false);
