@@ -38,6 +38,7 @@ export default function Home() {
           strength={400}
         >
           <div className="temp-top-buffer"></div>
+          <Space />
           <Page>
             <Intro text={"Be The Captain of your life"} />
             <Divide color="darkgray" />
